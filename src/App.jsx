@@ -389,7 +389,7 @@ export default function App() {
                     {group.links.map(link => (
                       <li 
                         key={link} 
-                        onClick={() => link === 'Private Showing' ? setShowModal(true) : scrollToSection(group.id)}
+                        onClick={() => setShowModal(true)}
                         className="text-[11px] text-[#8a95a5] tracking-[1px] uppercase cursor-pointer hover:text-[#3a414d] transition-colors"
                       >
                         {link}
