@@ -386,19 +386,27 @@ export default function App() {
                 <div key={group.title}>
                   <p className="text-[10px] text-[#e2b6a3] tracking-[3px] uppercase mb-6">{group.title}</p>
                   <ul className="flex flex-col gap-3">
-                  {group.links.map(link => (
-  <li 
-    key={link} 
-    onClick={() => 
-      ['Private Showing', 'Custom Inquiries', 'Press', 'EMAIL US directly'].includes(link) 
-      ? setShowModal(true) 
-      : scrollToSection(group.id)
-    }
-    className="text-[11px] text-[#8a95a5] tracking-[1px] uppercase cursor-pointer hover:text-[#3a414d] transition-colors"
-  >
-    {link}
-  </li>
-))}
+                    {group.links.map(link => (
+                   <li 
+                   key={link} 
+                   onClick={() => 
+                     ['Private Showing', 'Custom Inquiries', 'Press'].includes(link) 
+                       ? setShowModal(true) 
+                       : scrollToSection(group.id)
+                   }
+                   className="text-[11px] text-[#8a95a5] tracking-[1px] uppercase cursor-pointer hover:text-[#3a414d] transition-colors"
+                 >
+                   {link}
+                 </li>
+                    ))}
+                    {/* Extra email link in Contact column */}
+                    {group.title === 'Contact' && (
+                      <li className="mt-2">
+                         <a href="mailto:seaglore@gmail.com" className="text-[11px] text-[#e2b6a3] tracking-[1px] uppercase hover:text-[#3a414d] transition-colors">
+                            EMAIL US directly
+                         </a>
+                      </li>
+                    )}
                   </ul>
                 </div>
               ))}
