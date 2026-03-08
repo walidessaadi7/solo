@@ -398,9 +398,12 @@ export default function App() {
                     {/* Extra email link in Contact column */}
                     {group.title === 'Contact' && (
                       <li className="mt-2">
-                         <a href="mailto:seaglore@gmail.com" className="text-[11px] text-[#e2b6a3] tracking-[1px] uppercase hover:text-[#3a414d] transition-colors">
-                            EMAIL US directly
-                         </a>
+                      <button 
+  onClick={() => setShowModal(true)} 
+  className="text-[11px] text-[#e2b6a3] tracking-[1px] uppercase hover:text-[#3a414d] transition-colors cursor-pointer w-full text-left"
+>
+  EMAIL US directly
+</button>
                       </li>
                     )}
                   </ul>
