@@ -67,7 +67,8 @@ export default function App() {
           <h3 className="font-medium text-[#3a414d] text-[24px] mb-2 tracking-[4px] uppercase">Private Showing</h3>
           <p className="text-[#8a95a5] text-[12px] mb-12 tracking-[2px] uppercase">Please fill out the form below. We will review your request and reply shortly.</p>
           
-          <form onSubmit={handleFormSubmit} className="flex flex-col gap-8">
+          <form action="https://formspree.io/f/YOUR_FORM_ID" 
+               method="POST"onSubmit={handleFormSubmit} className="flex flex-col gap-8">
             <input 
               type="text" 
               required 
