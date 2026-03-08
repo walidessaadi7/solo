@@ -389,7 +389,7 @@ export default function App() {
                     {group.links.map(link => (
                       <li 
                         key={link} 
-                        onClick={() => setShowModal(true)}
+                        onClick={() => link === 'Private Showing' ? setShowModal(true) : scrollToSection(group.id)}
                         className="text-[11px] text-[#8a95a5] tracking-[1px] uppercase cursor-pointer hover:text-[#3a414d] transition-colors"
                       >
                         {link}
@@ -398,12 +398,9 @@ export default function App() {
                     {/* Extra email link in Contact column */}
                     {group.title === 'Contact' && (
                       <li className="mt-2">
-                      <button 
-  onClick={() => setShowModal(true)} 
-  className="text-[11px] text-[#e2b6a3] tracking-[1px] uppercase hover:text-[#3a414d] transition-colors cursor-pointer w-full text-left"
->
-  EMAIL US directly
-</button>
+                         <a href="mailto:seaglore@gmail.com" className="text-[11px] text-[#e2b6a3] tracking-[1px] uppercase hover:text-[#3a414d] transition-colors">
+                            EMAIL US directly
+                         </a>
                       </li>
                     )}
                   </ul>
