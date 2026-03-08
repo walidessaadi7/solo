@@ -132,7 +132,7 @@ export default function App() {
         </nav>
 
         {/* Hero Section - Height tightly restricted so the section below peeks out naturally */}
-        <div id="hero" className="bg-[#f8f8f8] h-[calc(100vh-200px)] min-h-[500px] overflow-hidden relative shrink-0 w-full" data-name="Section">
+        <div id="hero" className="bg-[#f8f8f8] h-[calc(100vh-140px)] min-h-[560px] overflow-hidden relative shrink-0 w-full" data-name="Section">
           <div className="absolute inset-0 opacity-90 overflow-hidden" data-name="Container">
             <img alt="" className="absolute inset-0 object-cover pointer-events-none w-full h-full scale-110" src={imgImageAbstractWaveTexture} />
           </div>
@@ -389,7 +389,7 @@ export default function App() {
                     {group.links.map(link => (
                       <li 
                         key={link} 
-                        onClick={() => link === 'Private Showing' ? setShowModal(true) : scrollToSection(group.id)}
+                        onClick={() => setShowModal(true)}
                         className="text-[11px] text-[#8a95a5] tracking-[1px] uppercase cursor-pointer hover:text-[#3a414d] transition-colors"
                       >
                         {link}
