@@ -133,7 +133,7 @@ export default function App() {
         </nav>
 
         {/* Hero Section - Height tightly restricted so the section below peeks out naturally */}
-        <div id="hero" className="bg-[#f8f8f8] h-[calc(100vh-60px+53px)] min-h-[693px] overflow-hidden relative shrink-0 w-full" data-name="Section">
+        <div id="hero" className="bg-[#f8f8f8] h-[calc(100vh-60px+72px)] min-h-[712px] overflow-hidden relative shrink-0 w-full" data-name="Section">
           <div className="absolute inset-0 opacity-90 overflow-hidden" data-name="Container">
             <img alt="" className="absolute inset-0 object-cover pointer-events-none w-full h-full scale-110" src={imgImageAbstractWaveTexture} />
           </div>
